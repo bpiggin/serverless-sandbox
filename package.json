@@ -1,0 +1,25 @@
+{
+  "name": "serverless-sandbox",
+  "version": "2.2.0",
+  "description": "A Node.js starter for Serverless Framework with ES6 and TypeScript support",
+  "main": "handler.js",
+  "scripts": {
+    "test": "serverless-bundle test"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
+  },
+  "devDependencies": {
+    "serverless-bundle": "3.2.0",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.71",
+    "@types/serverless": "^1.78.20",
+    "aws-lambda": "^1.0.6"
+  }
+}
