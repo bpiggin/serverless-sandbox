@@ -1,0 +1,22 @@
+diff --git a/node_modules/dynamodb-toolbox/dist/classes/Entity.d.ts b/node_modules/dynamodb-toolbox/dist/classes/Entity.d.ts
+index 5954a49..aaea117 100644
+--- a/node_modules/dynamodb-toolbox/dist/classes/Entity.d.ts
++++ b/node_modules/dynamodb-toolbox/dist/classes/Entity.d.ts
+@@ -8,7 +8,7 @@ import { DocumentClient } from 'aws-sdk/clients/dynamodb';
+ import { FilterExpressions } from '../lib/expressionBuilder';
+ import { ProjectionAttributes } from '../lib/projectionBuilder';
+ export declare type SchemaType = string | number | boolean | null | {
+-    [key: string]: SchemaType;
++    [key: string]: any;
+ } | SchemaType[];
+ export interface EntityConstructor {
+     name: string;
+@@ -198,7 +198,7 @@ declare class Entity<Schema extends {
+      * @param {object} [options] - Additional update options.
+      * @param {object} [params] - Additional DynamoDB parameters you wish to pass to the update request.
+      */
+-    update(item?: Partial<Schema>, options?: updateOptions, params?: Partial<DocumentClient.UpdateItemInput>): Promise<DocumentClient.UpdateItemInput | import("aws-sdk/lib/request").PromiseResult<DocumentClient.UpdateItemOutput, import("aws-sdk/lib/error").AWSError>>;
++    update(item?: Partial<Schema>, options?: updateOptions, params?: Partial<DocumentClient.UpdateItemInput>): Promise<import("aws-sdk/lib/request").PromiseResult<DocumentClient.UpdateItemOutput, import("aws-sdk/lib/error").AWSError>>;
+     /**
+      * Generate parameters for UPDATE transaction operation
+      * @param {object} item - The item you wish to update.
