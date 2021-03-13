@@ -7,6 +7,7 @@ const serverlessConfiguration: Serverless = {
     individually: true,
   },
   plugins: [
+    "serverless-webpack",
     "serverless-bundle",
     "serverless-offline",
     "serverless-dotenv-plugin",
