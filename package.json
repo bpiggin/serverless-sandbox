@@ -6,7 +6,7 @@
   "scripts": {
     "test": "serverless-bundle test"
   },
-  "author": "",
+  "author": "Benjamin Piggin",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
   "dependencies": {
     "@types/aws-lambda": "^8.10.71",
     "@types/serverless": "^1.78.20",
-    "aws-lambda": "^1.0.6"
+    "@types/uuid": "^8.3.0",
+    "aws-lambda": "^1.0.6",
+    "dynamodb-toolbox": "^0.3.3",
+    "patch-package": "^6.2.2"
   }
 }
