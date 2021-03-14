@@ -13,7 +13,9 @@
       "@functions/*": ["src/functions/*"],
       "@lib/*": ["src/lib/*"],
       "@services/*": ["src/lib/services/*"],
-      "@dataLayer/*": ["src/lib/dataLayer/*"]
+      "@dataLayer/*": ["src/lib/dataLayer/*"],
+      "@types/*": ["src/lib/types/*"],
+      "@middleware/*": ["src/lib/middleware/*"]
     }
   },
   "include": ["./**/*.ts"],

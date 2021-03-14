@@ -1,10 +1,10 @@
-import { APIGatewayProxyHandler } from "aws-lambda";
+import { Handler } from "@lib/types/api";
+import middy from "@middy/core";
+import cors from "@middy/http-cors";
+import { buildResponse } from "@middleware/buildResponse";
 
-export const main: APIGatewayProxyHandler = async (_) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Hello world!",
-    }),
-  };
+const handler: Handler = async () => {
+  return "Hello world!";
 };
+
+export const main = middy(handler).use(buildResponse()).use(cors());

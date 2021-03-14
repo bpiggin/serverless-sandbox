@@ -23,7 +23,7 @@ const objectEntity = new Entity<Object>({
       type: "string",
       partitionKey: true,
       hidden: true,
-      default: ({ uuid }: Object) => `$OBJECT#${uuid}`,
+      default: ({ uuid }: Object) => `OBJECT#${uuid}`,
     },
     sk: {
       type: "string",
@@ -34,12 +34,12 @@ const objectEntity = new Entity<Object>({
     GSI1PK: {
       type: "string",
       hidden: true,
-      default: ({ string }: Object) => `$PK#${string}`,
+      default: ({ string }: Object) => `PK#${string}`,
     },
     GSI1SK: {
       type: "string",
       hidden: true,
-      default: ({ uuid }: Object) => `$SK#${uuid}`,
+      default: ({ uuid }: Object) => `SK#${uuid}`,
     },
     uuid: { type: "string", required: true },
     object: { type: "map", required: true },
@@ -81,7 +81,7 @@ class ObjectManager {
   ): Promise<Object> {
     const updateObject = { uuid, ...updatedFields };
     const updatedObject = (
-      await this.entity.update(updateObject, { returnValues: "all_new" })
+      await this.entity.update(updateObject, { returnValues: "ALL_NEW" })
     ).Attributes as Object;
     return updatedObject;
   }

@@ -22,6 +22,8 @@
     "serverless-webpack": "^5.3.5"
   },
   "dependencies": {
+    "@middy/core": "^1.5.2",
+    "@middy/http-cors": "^1.5.2",
     "@types/aws-lambda": "^8.10.71",
     "@types/serverless": "^1.78.20",
     "@types/uuid": "^8.3.0",
